@@ -1,0 +1,77 @@
+/* Styles for the container that holds everything */
+.login-select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0; /* Light grey background */
+    text-align: center;
+  }
+  
+  /* Adjust the header spacing */
+  .login-select-container h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color: #333; /* Darker text for contrast */
+  }
+  
+  /* Image (logo) styling and animation */
+  .login-select-container img {
+    width: 300px; /* Adjusted width for logo */
+    height: auto; /* Keep aspect ratio */
+    animation: logoAnimation 2s ; /* Infinite logo animation */
+    margin-bottom: 30px;
+  }
+  
+  /* Animation for the logo */
+  @keyframes logoAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Container for the buttons */
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  /* General styling for both role buttons */
+  .role-button {
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transitions */
+  }
+  
+  /* Mentor button specific styling */
+  .mentor-button {
+    background-color: #2196F3; /* Green color for Mentor */
+  }
+  
+  .mentor-button:hover {
+    background-color: #1976D2; /* Darker green on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+  }
+  
+  /* Mentee button specific styling */
+  .mentee-button {
+    background-color: #2196F3; /* Blue color for Mentee */
+  }
+  
+  .mentee-button:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+  }
+  

@@ -12,6 +12,27 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+/* Common Styles */
+.app {
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-header {
+  padding: 20px;
+}
+
+/* Light Theme */
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: black;
+  color: white;
+}
 
 .App-header {
   background-color: #282c34;

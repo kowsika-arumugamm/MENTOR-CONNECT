@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Features from './components/Features';
+import Contact from './components/Footer';
+import Loginselect from './components/Loginselect';
+import About from './components/About';
+import CalendarScheduler from './components/CalendarScheduler';
+import MentorSignUpMultiStep from './components/MentorSignUpMultiStep';
 
-function App() {
+const Home = () => (
+  <>
+    <Hero />
+    <Features />
+    <About />
+    <Contact />
+  </>
+);
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        {/* Home route (renders Hero, Features, About, and Contact) */}
+        <Route path="/" element={<Home />} />
+
+        {/* CalendarScheduler route */}
+        <Route path="/calendar-scheduler" element={<CalendarScheduler />} />
+
+        {/* Loginselect route */}
+        <Route path="/Loginselect" element={<Loginselect />} />
+
+        {/* MentorSignUpMultiStep route */}
+        <Route path="/mentor-sign-up" element={<MentorSignUpMultiStep />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

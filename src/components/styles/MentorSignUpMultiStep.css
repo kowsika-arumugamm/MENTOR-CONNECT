@@ -1,0 +1,36 @@
+/* MentorSignUpMultiStep.css */
+.sign-up-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-form label {
+  margin: 10px 0 5px;
+}
+
+.sign-up-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sign-up-form button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sign-up-form button:hover {
+  background-color: #218838;
+}
