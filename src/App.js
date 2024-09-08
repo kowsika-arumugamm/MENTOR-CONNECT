@@ -21,7 +21,7 @@ const Home = () => (
 const App = () => {
   return (
     <Router>
-      <Header />
+       <Header /> 
       <Routes>
         {/* Home route (renders Hero, Features, About, and Contact) */}
         <Route path="/" element={<Home />} />

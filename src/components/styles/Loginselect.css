@@ -1,30 +1,26 @@
-/* Styles for the container that holds everything */
+/*
 .login-select-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #f0f0f0; /* Light grey background */
+    height: 100vh; 
+    background-color: #f0f0f0; 
     text-align: center;
   }
   
-  /* Adjust the header spacing */
   .login-select-container h1 {
     font-size: 2.5rem;
     margin-top: 20px;
-    color: #333; /* Darker text for contrast */
+    color: #333; 
   }
   
-  /* Image (logo) styling and animation */
   .login-select-container img {
-    width: 300px; /* Adjusted width for logo */
-    height: auto; /* Keep aspect ratio */
-    animation: logoAnimation 2s ; /* Infinite logo animation */
+    width: 300px; 
+    height: auto; 
+    animation: logoAnimation 2s ; 
     margin-bottom: 30px;
   }
-  
-  /* Animation for the logo */
   @keyframes logoAnimation {
     0% {
       transform: scale(1);
@@ -37,12 +33,10 @@
     }
   }
   
-  /* Container for the buttons */
   .button-container {
     margin-top: 20px;
   }
   
-  /* General styling for both role buttons */
   .role-button {
     padding: 12px 24px;
     margin: 10px;
@@ -52,26 +46,141 @@
     border: none;
     border-radius: 8px;
     color: #fff;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transitions */
+    transition: background-color 0.3s ease, transform 0.2s ease; 
   }
   
-  /* Mentor button specific styling */
   .mentor-button {
-    background-color: #2196F3; /* Green color for Mentor */
-  }
+    background-color: #2196F3; }
   
   .mentor-button:hover {
-    background-color: #1976D2; /* Darker green on hover */
-    transform: scale(1.05); /* Slight enlargement on hover */
+    background-color: #1976D2; 
+    transform: scale(1.05); 
   }
   
-  /* Mentee button specific styling */
+  
   .mentee-button {
-    background-color: #2196F3; /* Blue color for Mentee */
-  }
+    background-color: #2196F3; }
   
   .mentee-button:hover {
-    background-color: #1976D2; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight enlargement on hover */
+    background-color: #1976D2;
+    transform: scale(1.05); 
   }
-  
+  */
+
+/* Loginselect.css */
+
+/* Logo animation: gentle pulsing */
+@keyframes logoPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body
+{
+  background-image: url('D:\sih\internal hackathon\frontend\public\bg.png');
+}
+.login-select-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full height of the viewport to center vertically */
+  text-align: center;
+  padding: 20px;
+  height: 100vh; /* Full viewport height */;
+  background-image: url('D:\sih\internal hackathon\frontend\public\bg.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  color: black;
+}
+
+.logo {
+  width: 150px;
+  height: 50px;
+  margin-bottom: 20px;
+  animation: logoPulse 5s ; /* Logo pulse animation */
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space between the cards */
+  margin-top: 20px;
+}
+
+.role-card {
+  background: #fff;
+  border-radius: 12px; /* Slightly larger border radius for a rounded look */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increased shadow for more prominence */
+  padding: 20px;
+  width: 300px; /* Increased width of the card */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: cardEntrance 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Card entrance animation */
+@keyframes cardEntrance {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.role-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.role-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* Hover effect for the cards */
+.role-card:hover {
+  transform: translateY(-10px); /* Increased lift effect on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-image {
+  width: 100%; /* Ensure the image covers the card width */
+  height: 150px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  border-radius: 8px; /* Slightly smaller border radius for images */
+  margin-bottom: 15px;
+}
+
+/* Button hover effect */
+.role-button {
+  background-color: #0645ba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px; /* Larger padding for a more prominent button */
+  cursor: pointer;
+  font-size: 18px; /* Slightly larger font size */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.role-button:hover {
+  background-color: #4169e1;
+  transform: scale(1.05); /* Slight button grow effect on hover */
+}

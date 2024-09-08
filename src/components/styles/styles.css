@@ -1,4 +1,4 @@
-/* General resets */
+/* General Resets */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,6 @@
 }
 
 body {
-  background-color: #d4eff8;
   color: #ffffff;
 }
 
@@ -20,12 +19,13 @@ html {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for better image visibility */
+  height: 80px;
+  background-color: rgba(31, 40, 51, 0.9);
   color: #c5c6c7;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
@@ -38,9 +38,14 @@ html {
 
 .logo-img {
   height: 50px;
+  transition: transform 0.3s ease;
 }
 
-/* Navigation links */
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -64,48 +69,28 @@ html {
   text-decoration: none;
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
 }
 
 .nav-links a:hover {
-  color: #66fcf1;
+  color: #02c6b9;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* CTA button styling */
-.cta-btn {
-  background-color: #77c9e1; /* Button color */
-  color: #19232f; /* Text color */
-  border: none;
-  border-radius: 5px;
-  padding: 10px 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: #45a29e; /* Darker hover color */
-  transform: scale(1.05); /* Slight scale effect on hover */
-}
-
-/* Mobile menu toggle */
 .menu-toggle {
-  display: none; /* Hidden by default */
+  display: none;
   background: none;
   border: none;
   color: #c5c6c7;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .nav-links {
-    display: block;
+    display: none;
     max-height: 0;
-    overflow: hidden;
     position: absolute;
     top: 100%;
     right: 0;
@@ -115,7 +100,7 @@ html {
   }
 
   .nav-links.open {
-    max-height: 300px; /* Adjust as needed */
+    max-height: 300px;
   }
 
   .menu-toggle {
@@ -136,20 +121,42 @@ html {
   }
 }
 
+.navbar.scrolled {
+  background-color: rgba(31, 40, 51, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn {
+  background-color: #77c9e1;
+  color: #19232f;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #45a29e;
+  transform: scale(1.05);
+}
+
 /* Hero Section */
 .hero {
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('D:\sih\internal hackathon\frontend\public\bg.png');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-image: url('D:/sih/internal hackathon/frontend/public/bg.png');
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   text-align: center;
+  position: relative;
 }
-
 
 .hero::before {
   content: '';
@@ -158,31 +165,31 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(238, 224, 224, 0.4); /* Dark overlay with some opacity */
+  /* background-color: rgba(0, 0, 0, 0.5); */
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Ensures content is above the overlay */
+  z-index: 2;
+  color: #ffffff;
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  color: #7566fc;
+  color: #008a8f;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-top: 1rem;
-  color: #c5c6c7;
+  color: #000a15;
 }
 
-/* Call-to-Action Button */
 .cta-btn {
   margin-top: 2rem;
   padding: 1rem 2rem;
-  background-color: #66fcf1;
+  background-color: #008a8f;
   border: none;
   color: #1f2833;
   cursor: pointer;
@@ -190,10 +197,10 @@ html {
 }
 
 .cta-btn:hover {
-  background-color: #45a29e;
+  background-color: #1bbce4;
 }
 
-/* About Page Styles */
+/* About Section */
 .about-container {
   height: 100vh;
   display: flex;
@@ -208,7 +215,7 @@ html {
 
 .about-container h1 {
   font-size: 3rem;
-  color: #66fcf1;
+  color: #008a8f;
   margin-bottom: 1rem;
 }
 
@@ -226,47 +233,16 @@ html {
   margin-top: 2rem;
 }
 
-/* Call-to-Action Button */
-.cta-btn {
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-  background-color: #66fcf1;
-  border: none;
-  color: #1f2833;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: #45a29e;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .about-container h1 {
-    font-size: 2rem;
-  }
-
-  .about-container p {
-    font-size: 1rem;
-  }
-
-  .about-container img {
-    width: 150px;
-  }
-}
-
 /* Features Section */
 .features {
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('D:\sih\internal hackathon\frontend\public\bg.png');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-image: url('D:/sih/internal hackathon/frontend/public/bg.png');
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   text-align: center;
 }
@@ -274,7 +250,8 @@ html {
 .features h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #66fcf1;
+  color: #079380;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .feature-cards {
@@ -284,20 +261,32 @@ html {
 }
 
 .card {
-  background-color: #0b0c10;
+  background-color: rgba(11, 12, 16, 0.8);
   padding: 2rem;
   border-radius: 8px;
   width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  animation: slideUp 1.2s ease-out;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
   font-size: 1.5rem;
-  color: #171e1e;
+  color: #66fcf1;
   margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .card p {
   color: #c5c6c7;
+  animation: fadeIn 1.8s ease-in-out;
 }
 
 /* Footer */
@@ -323,4 +312,54 @@ html {
 
 .social-icons a:hover {
   color: #45a29e;
+}
+
+/* Animations */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 1.2s ease-in-out;
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+.cta-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
