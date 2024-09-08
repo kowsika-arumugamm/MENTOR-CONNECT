@@ -1,7 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles/Loginselect.css';
-//import Header from './Header';
+import logo from '../logo.jpg';
+import mentorImage from '../mentor-image.png'; // Replace with actual path to your image
+import menteeImage from '../mentee-image.png'; // Replace with actual path to your image
 
 const Loginselect = () => {
   const navigate = useNavigate();
@@ -15,19 +17,24 @@ const Loginselect = () => {
   };
 
   return (
-
     <div className="login-select-container">
-    {/* <Header /> */}
-    <br/><br/><br/><br/>
-      <img src="./logo.jpg" alt=""/>
+      <img src={logo} alt="Logo" className="logo" />
       <h1>Select Your Role</h1>
-      <div className="button-container">
-        <button className="role-button mentor-button" onClick={handleMentorClick}>
-          Mentor
-        </button>
-        <button className="role-button mentee-button" onClick={handleMenteeClick}>
-          Mentee
-        </button>
+      <div className="card-container">
+        <div className="role-card">
+          <img src={mentorImage} alt="Mentor" className="card-image" />
+          <h2>Mentor</h2>
+          <button className="role-button" onClick={handleMentorClick}>
+            Log in as Mentor
+          </button>
+        </div>
+        <div className="role-card">
+          <img src={menteeImage} alt="Mentee" className="card-image" />
+          <h2>Mentee</h2>
+          <button className="role-button" onClick={handleMenteeClick}>
+            Log In as Mentee
+          </button>
+        </div>
       </div>
     </div>
   );
