@@ -1,0 +1,87 @@
+/* Overall container for the login form */
+.login-form {
+    text-align:center;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: #e3f2fd; /* Light blue background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Heading */
+  .login-form h1 {
+    text-align: center;
+    color: #0d47a1; /* Dark blue color for the heading */
+    background-color: #bbdefb; /* Lighter blue background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form inputs and selects */
+  input, select {
+    width: 100%; /* Ensures full width */
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #90caf9; /* Blue border */
+    border-radius: 5px;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #0d47a1; /* Dark blue border on focus */
+    outline: none;
+  }
+  
+  /* Buttons */
+  button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background-color: #1e88e5; /* Blue background for buttons */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+  }
+  
+  button:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:active {
+    background-color: #0d47a1; /* Even darker blue when clicked */
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Message text */
+  .login-form p {
+    text-align: center;
+    color: #0d47a1; /* Dark blue color for message text */
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  /* Link */
+  .login-form a {
+    color: #1e88e5; /* Blue link color */
+    text-decoration: none;
+  }
+  
+  .login-form a:hover {
+    text-decoration: underline;
+  }
+  
